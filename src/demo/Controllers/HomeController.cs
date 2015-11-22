@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
+using demo.ViewModels;
 
 namespace demo.Controllers
 {
@@ -16,6 +17,12 @@ namespace demo.Controllers
         public IActionResult About()
         {
             ViewData["Message"] = "小申的示例学习程序";
+
+            var serverInfo =  new ServerInfoViewModel()
+            {
+                Name = Environment.MachineName,
+                Software = Environment.OSVersion.ToString()
+            };
 
             return View();
         }
