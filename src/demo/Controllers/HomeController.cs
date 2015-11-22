@@ -15,7 +15,7 @@ namespace demo.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "小申的示例学习程序";
 
             return View();
         }
